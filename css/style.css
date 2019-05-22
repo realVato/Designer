@@ -145,3 +145,39 @@ h1 {
 .row.row-three div:hover {
     border: 5px solid rgb(161, 34, 55);
 }
+
+/* Blur showcase */
+.blur-showcase {
+    position: relative;
+}
+
+.blur-showcase::after {
+    content: '';
+    background: url(/img/art-calamity-dawn-1151261.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    transition: 1s;
+}
+
+.blur-showcase:hover::after {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    transition: 1s;
+}
+
+.blur-showcase .content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    text-align: center;
+}
+
+.blur-showcase .content p {
+    font-size: 1.5rem;
+    color: rgb(235, 0, 0);
+}
