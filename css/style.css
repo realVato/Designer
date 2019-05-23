@@ -30,6 +30,10 @@ h1 {
 
 textarea {
     resize: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
  }
 
 /* Navbar */
@@ -156,7 +160,7 @@ textarea {
 /* Blur showcase */
 .blur-showcase {
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .blur-showcase::after {
@@ -217,7 +221,6 @@ textarea {
 
 /* Services */
 .services {
-    height: 30vh;
     margin: 5px 0;
     padding: 0 5px;
 }
@@ -236,6 +239,7 @@ textarea {
     justify-content: center;
     background-color: rgb(250, 247, 247);
     transition: .3s ease-in-out;
+    padding: 25px;
 }
 
 .services .grid-3 div:hover {
@@ -244,7 +248,7 @@ textarea {
 
 /* Why Us */
 .why-us {
-    padding: 100px 30px;
+    margin: 40px 0;
 }
 
 .why-us .why-us-header {
@@ -279,4 +283,54 @@ textarea {
     color: #fff;
     text-align: center;
     padding: 10px 0px;
+  }
+
+  /* Media Query */
+  @media (max-width: 700px) {
+
+    /* Gallery showcase */
+    .row {
+        grid-template-columns: 1fr;
+    }
+  
+    /* Services */
+    .services .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .hide-on-small {
+        display: none !important;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+  }
+
+  @media (max-height: 500px) {
+
+    /* Gallery showcase */
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Blur showcase */
+    .blur-showcase .content {
+        top: 20%;
+        }
+  
+    /* Services */
+    .services .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .hide-on-small {
+        display: none !important;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
   }
